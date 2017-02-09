@@ -1,11 +1,22 @@
-Jenkins
----
+# jenkins-zsh plugin
 
 NOTE: Still in development, but most features work.
 
 A jenkins plugin for ZSH, heavily inspired by the excellent [jira](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira) plugin.
 
-Usage:
+
+## Install
+
+Using oh-my-zsh:
+
+    git clone https://github.com/tomplex/jenkins-zsh.git ~/$OH_MY_ZSH_PATH/plugins
+
+And then add "jenkins-zsh" to your oh-my-zsh plugins in .zshrc.
+
+You'll also need to add a "JENKINS_URL" env variable to your .zshrc. If you have Java and the Jenkins CLI installed, then adding a "JENKINS_CLI_PATH" env variable will allow some extra features, such as job name autocompletion when trying to open a specific job. 
+
+
+## Usage
 
     jenkins [command] [option]
 
@@ -29,19 +40,8 @@ Open the page for the specified job. If the JENKINS_CLI_PATH env var is specifie
 
 Opens the search results page for the given phrase. Multiple word phrases must be enclosed in quotes.
 
-    jenkins node [node name]
+    jenkins node "node name"
 
 Will open up the page for the named node.
-
-Install
----
-
-Using oh-my-zsh:
-
-    git clone https://github.com/tomplex/jenkins-zsh.git ~/$OH_MY_ZSH_PATH/plugins
-
-And then add "jenkins-zsh" to your oh-my-zsh plugins in .zshrc.
-
-You'll also need to add a "JENKINS_URL" env variable to your .zshrc. If you have Java and the Jenkins CLI installed, then adding a "JENKINS_CLI_PATH" env variable will allow some extra features, such as job name autocompletion when trying to open a specific job. 
 
 
