@@ -1,0 +1,47 @@
+#compdef jenkins
+#autoload
+
+
+function _jenkins() {
+	local state
+	local -a _1st_arguments	
+	local -a _2nd_arguments
+	local list_jobs_cmd
+	export ALL_JENKINS_JOBS=()
+
+	if [[ -n "${JENKINS_CLI}" ]]; then
+		list_jobs_cmd="java -jar ${JENKINS_CLI} -noKeyAuth list-jobs"
+	else
+		list_jobs_cmd="echo"
+	fi
+
+	if [[ ${#ALL_JENKINS_JOBS[@]} -eq 0 ]]; then
+		ALL_JENKINS_JOBS=("${(@f)$(eval ${list_jobs_cmd})}")
+	fi
+	_1st_arguments=(
+	  'home:open jenkins home'
+	  'new:create a new job'
+	  'node:open the page for a specific node'
+	  'search:search jenkins for a keywork or phrase'
+	  'job:open the page for a specific job'
+	)
+
+	_arguments -C \
+	  ':command:->command' \
+	  '*::options:->options' \
+	  ':job:(${ALL_JENKINS_JOBS})'
+	
+
+	case $state in
+#	(job)
+#			compadd "$@" (_2nd_arguments)
+#		;;
+
+	  (command)
+	    _describe -t commands "jenkins subcommand" _1st_arguments
+	   ;;
+	esac
+}
+
+_jenkins "$@"
+
