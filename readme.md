@@ -5,18 +5,18 @@ NOTE: Still in development, but most features work.
 A jenkins plugin for ZSH, heavily inspired by the excellent [jira](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira) plugin.
 
 
-## Install
+### Install
 
 Using oh-my-zsh:
 
-    git clone https://github.com/tomplex/jenkins-zsh.git ~/$OH_MY_ZSH_PATH/plugins
+    git clone https://github.com/tomplex/jenkins-zsh.git $ZSH/plugins/jenkins-zsh
 
 And then add "jenkins-zsh" to your oh-my-zsh plugins in .zshrc.
 
 You'll also need to add a "JENKINS_URL" env variable to your .zshrc. If you have Java and the Jenkins CLI installed, then adding a "JENKINS_CLI_PATH" env variable will allow some extra features, such as job name autocompletion when trying to open a specific job. 
 
 
-## Usage
+### Usage
 
     jenkins [command] [option]
 
