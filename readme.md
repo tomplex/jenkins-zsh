@@ -7,7 +7,7 @@ A jenkins plugin for ZSH, heavily inspired by the excellent [jira](https://githu
 
 Using oh-my-zsh:
 
-    git clone https://github.com/tomplex/jenkins-zsh.git $ZSH/plugins/jenkins-zsh
+    cd $ZSH/plugins && git clone https://github.com/tomplex/jenkins-zsh.git
 
 And then add "jenkins-zsh" to your oh-my-zsh plugins in .zshrc.
 
