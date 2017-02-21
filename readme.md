@@ -1,7 +1,5 @@
 # jenkins-zsh plugin
 
-NOTE: Still in development, but most features work.
-
 A jenkins plugin for ZSH, heavily inspired by the excellent [jira](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/jira) plugin.
 
 
@@ -13,8 +11,14 @@ Using oh-my-zsh:
 
 And then add "jenkins-zsh" to your oh-my-zsh plugins in .zshrc.
 
-You'll also need to add a "JENKINS_URL" env variable to your .zshrc. If you have Java and the Jenkins CLI installed, then adding a "JENKINS_CLI_PATH" env variable will allow some extra features, such as job name autocompletion when trying to open a specific job. 
+You can specify a jenkins base url three different ways (checked in this order):  
+1. Using a .jenkins-url file in the local directory (i.e. ~/project/.jenkins-url)
+2. .jenkins-url file in the ~/ directory
+3. "JENKINS_URL" environment variable.
 
+If you have Java and the Jenkins CLI installed, then adding a "JENKINS_CLI_PATH" env variable will allow some extra features, such as job name autocompletion when trying to open a specific job.   
+
+Dependencies: This plugin depends on the [urltools](https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/urltools/urltools.plugin.zsh) plugin.
 
 ### Usage
 
