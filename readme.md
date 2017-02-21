@@ -12,9 +12,9 @@ Using oh-my-zsh:
 And then add "jenkins-zsh" to your oh-my-zsh plugins in .zshrc.
 
 You can specify a jenkins base url three different ways (checked in this order):  
-1. Using a .jenkins-url file in the local directory (i.e. ~/project/.jenkins-url)
-2. .jenkins-url file in the ~/ directory
-3. "JENKINS_URL" environment variable.
+1. Using a .jenkins-url file in the local directory (i.e. ~/project/.jenkins-url)  
+2. .jenkins-url file in the ~/ directory  
+3. "JENKINS_URL" environment variable.  
 
 If you have Java and the Jenkins CLI installed, then adding a "JENKINS_CLI_PATH" env variable will allow some extra features, such as job name autocompletion when trying to open a specific job.   
 
